@@ -14,4 +14,11 @@ export class ListComponent {
       'Thor'
     ]
 
+    public lastHero? : string
+
+    removeLastHero() : void {
+     this.lastHero = this.heroNames.pop()
+
+    }
+
 }
