@@ -9,9 +9,13 @@ import { Character } from '../interfaces/character.interface';
 export class MainPageComponent {
 
   public characters : Character[] = [
-    
+
     {
       name: 'Krillin',
+      power: 1000
+    },
+    {
+      name: 'Picollo',
       power: 1000
     },
     {
@@ -19,5 +23,9 @@ export class MainPageComponent {
       power:2000
     }
   ]
+
+  onNewCharacter(character: Character) : void {
+    this.characters.push(character);
+  }
 }
 
