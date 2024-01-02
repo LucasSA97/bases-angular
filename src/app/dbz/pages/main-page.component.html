@@ -5,14 +5,14 @@
   <div class="col">
     <h4>Listado</h4>
 
-    <list-dbz [characterList]="characters"></list-dbz>
+    <list-dbz (onDelete)="onDelete($event)" [characterList]="characters"></list-dbz>
 
   </div>
 
   <div class="col">
     <h4>Agregar personajes</h4>
 
-    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)" ></dbz-add-character>
 
   </div>
 </div>
