@@ -5,7 +5,9 @@
   <div class="col">
     <h4>Listado</h4>
 
-    <list-dbz (onDelete)="dbzService.onDelete($event)" [characterList]="dbzService.characters"></list-dbz>
+    <list-dbz
+      [characterList]="dbzService.characters"
+      (onDelete)="dbzService.deleteCharacterById($event)"></list-dbz>
 
   </div>
 

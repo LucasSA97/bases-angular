@@ -8,20 +8,30 @@ import { Character } from '../../interfaces/character.interface';
 })
 export class ListDbzComponent {
 
-  @Input()
 
+  @Input()
   public characterList: Character[] = [
     {
       name: 'trunks',
       power: 200
     }
   ]
-
   @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter()
+  public onDelete: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter(index : number) : void {
-    //Emitir el id del personaje
-    this.onDelete.emit(index)
-  }
+    onDeleteCharacter(id? : string ) : void {
+      if( !id ) return
+
+
+      this.onDelete.emit(id)
+    }
+
+  // @Output()
+  // public onDelete: EventEmitter<string> = new EventEmitter()
+
+  // onDeleteCharacter(id? : string) : void {
+  //   if( !id ) return
+  //    this.onDelete(id)
+  // }
 }
+

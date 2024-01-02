@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { DbzService } from '../services/dbz.service';
 
 @Component({
@@ -6,10 +6,12 @@ import { DbzService } from '../services/dbz.service';
   templateUrl: './main-page.component.html'
 })
 
+
+
 export class MainPageComponent {
 
-  constructor( public dbzService: DbzService){
-    
+  constructor( private dbzService: DbzService){
+
   }
 
 }
